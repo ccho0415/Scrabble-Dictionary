@@ -15,17 +15,17 @@ import java.util.ArrayList;
 
 public class WordLists{
     
-    File dictionary;
+    String fileName;
     // Constructor that only takes the dictionary file     
-    public WordLists(String fileName){
-
-        File dictionary = new File(fileName);
-
+    public WordLists(String fileName){       
+        this.fileName = fileName;
+        
     }
 
 
-    public ArrayList<String> lengthN(int n){
-        Scanner input = new Scanner(dictionary);
+    public ArrayList<String> lengthN(int n) throws FileNotFoundException{       
+        File dictFile = new File(fileName);
+        Scanner input = new Scanner(dictFile);        
         ArrayList<String> output = new ArrayList<String>();
         String word;
         PrintWriter text = new PrintWriter("output.txt");
@@ -33,32 +33,33 @@ public class WordLists{
             word = input.nextLine();
             if(word.length() == n){
                 text.println(word);
+                output.add(word);
             }
         }
-            output.close();
-    
+            text.close();
+        return output;
     }
 
 
-    public ArrayList<String> startsWith(int n, char firstLetter){
+//     public ArrayList<String> startsWith(int n, char firstLetter){
 
-        // your code here
+//         // your code here
 
-    }
+//     }
 
 
-    public ArrayList<String> containsLetter(int n, char included){
+//     public ArrayList<String> containsLetter(int n, char included){
 
-        // your code here
+//         // your code here
 
-    }
+//     }
 
  
-    public ArrayList<String> multiLetter(int m, char included){
+//     public ArrayList<String> multiLetter(int m, char included){
 
-        // your code here
+//         // your code here
 
-    }
+//     }
 
 } // end of class
 

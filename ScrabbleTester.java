@@ -12,13 +12,14 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class ScrabbleTest{
+public class ScrabbleTester{
     
     public static void main(String[] args){
         try{
-            WordLists dictionary = new WordLists(args[1]);    
+            WordLists dictionary = new WordLists(args[0]);   
+            dictionary.lengthN(20);
         }
-        catch(IOException e){
+        catch(Exception e){
             System.out.println(e);
         }
        
