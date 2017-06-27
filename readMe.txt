@@ -17,14 +17,26 @@ What the program needs to do:
         c. if true after finding 1 n
             or
            counter
+    5. Find words that have a length of n
+        d. 
 Test Class
     1. Dictionary Route
         Options:
-           1. Look up dictionary by letter
+           1. Look up dictionary by first letter
+                Binary Search for the first letter
            2. Look up dictionary by a combination of letters
+                Linear Search
            3. Look up dictionary by a word
+                Binary Search for the first letter
+                Seperate all the words that contain the first letter
+                .matches search 
            4. Exit
     2. Test Route
+           1. Find words that have a length of n
+                Linear Search
            1. Find combo of words that begin with n
+                Binary Search for the first letter
            2. Find words that contains n
+                Linear Search
            3. Find words that contains multiple of m
+                Linear Search -> Multiple
